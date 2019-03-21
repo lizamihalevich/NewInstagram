@@ -1,6 +1,6 @@
 import React from 'react';
-import Input from '../input';
-import Button from '../button/button';
+import Input from 'components/input';
+import Button from 'components/button/button';
 import styles from './authorization.styles.pcss';
 
 export default class Authorization extends React.Component {
