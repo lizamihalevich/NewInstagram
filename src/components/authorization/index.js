@@ -1,3 +1,3 @@
-import Authorization from './input';
+import Authorization from './authorization';
 
 export default Authorization;

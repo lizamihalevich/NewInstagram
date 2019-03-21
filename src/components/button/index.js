@@ -1,3 +1,3 @@
-import Button from './input';
+import Button from './button';
 
 export default Button;

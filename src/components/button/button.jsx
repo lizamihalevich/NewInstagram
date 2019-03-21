@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import styles from './button.styles.pcss';
-
-const classNames = require('classnames');
 
 export default class Button extends React.Component {
     render() {
