@@ -1,6 +1,12 @@
+html, body {
+    height: 100%;
+}
+
 body {
-    background-color: darkslategray;
-    color: #bcffea;
-    font-size: 30px;
+    background: linear-gradient(0deg, rgba(212,244,221,1) 0%,
+    rgba(206,243,220,0.8627159481956845) 2%,
+    rgba(66,208,206,0.7366655280276173) 49%,
+    rgba(49,167,166,0.7086543235458246) 100%) no-repeat;
+    overflow-y: hidden;
 }
 
