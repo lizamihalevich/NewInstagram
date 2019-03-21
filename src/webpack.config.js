@@ -1,34 +1,39 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-let conf = {
+
+module.exports = {
     entry: {
         main: [
             'babel-polyfill',
             'react-hot-loader/patch',
-            './src/index.jsx',
-        ]
+            './index.jsx',
+        ],
     },
+
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'main.js',
     },
+
+    context: path.resolve(__dirname, './'),
+
     devServer: {
-        overlay: true
+        overlay: true,
     },
     module: {
         rules: [
             {
                 test: /\.(jsx)$/,
-                use: 'babel-loader'
+                use: 'babel-loader',
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                use: ['style-loader', 'css-loader', 'postcss-loader'],
             },
             {
                 test: /\.jsx$/,
-                use: ['babel-loader', 'eslint-loader']
+                use: ['babel-loader', 'eslint-loader'],
             },
 
             {
@@ -46,20 +51,17 @@ let conf = {
                     },
                     { loader: 'postcss-loader' },
                 ],
-            }
-        ]
+            },
+        ],
+    },
+    resolve: {
+        modules: ['./', 'node_modules'],
+        extensions: ['.js', '.jsx', '.pcss'],
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'src/index.html'
+            template: 'index.html',
         }),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
     ],
-    context: path.resolve(__dirname, './src/'),
-    resolve: {
-        modules: ['./src/', 'node_modules'],
-        extensions: ['.js', '.jsx', '.pcss'],
-    },
-}
-
-module.exports = conf;
+};

@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import input from 'src/components/input';
+import Authorization from './components/authorization/authorization';
 
 function App() {
     return (
         <div>
-            Hello World!
-            <input />
+            <Authorization />
         </div>
     );
 }
