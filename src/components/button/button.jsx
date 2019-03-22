@@ -13,6 +13,7 @@ export default class Button extends React.Component {
               className={buttonClasses}
               type="submit"
               value={value}
+              {...this.props}
             />
         );
     }

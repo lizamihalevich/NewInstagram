@@ -9,6 +9,7 @@ export default class Input extends React.Component {
             <input
               className={styles.input_simple}
               placeholder={placeholder}
+              {...this.props}
             />
         );
     }
