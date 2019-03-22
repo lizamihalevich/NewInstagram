@@ -8,10 +8,10 @@ export default class Authorization extends React.Component {
         return (
             <div className={styles.authorization_wrapper}>
                 <div className={styles.center}>
-                    <Input placeholder="Email:" />
+                    <Input placeholder="Email:" type="email" />
                 </div>
                 <div className={styles.center}>
-                    <Input placeholder="Password:" />
+                    <Input placeholder="Password:" type="password" />
                 </div>
                 <div className={styles.center}>
                     <Button value="Sign In" />
