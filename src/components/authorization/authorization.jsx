@@ -1,6 +1,7 @@
 import React from 'react';
 import Input from 'components/input';
 import Button from 'components/button/button';
+import { Link } from 'react-router-dom';
 import styles from './authorization.styles.pcss';
 
 export default class Authorization extends React.Component {
@@ -15,6 +16,9 @@ export default class Authorization extends React.Component {
                 </div>
                 <div className={styles.center}>
                     <Button value="Sign In" />
+                </div>
+                <div className={styles.center}>
+                    <Link to="/login">Log In</Link>
                 </div>
             </div>
         );
