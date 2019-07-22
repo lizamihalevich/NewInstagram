@@ -1,11 +1,13 @@
 import React from 'react';
-import Input from 'components/input';
-import Button from 'components/button/button';
 import { Link } from 'react-router-dom';
+import classNames from 'classnames';
+import Input from '../common/input';
 import styles from './authorization.styles.pcss';
+
 
 export default class Authorization extends React.Component {
     render() {
+        const linkClasses = classNames(styles.button_simple, styles.button_link_style);
         return (
             <div className={styles.authorization_wrapper}>
                 <div className={styles.center}>
@@ -15,10 +17,10 @@ export default class Authorization extends React.Component {
                     <Input placeholder="Password:" type="password" />
                 </div>
                 <div className={styles.center}>
-                    <Button value="Sign In" />
+                    <Link to="/page" className={linkClasses}>Sign In</Link>
                 </div>
                 <div className={styles.center}>
-                    <Link to="/login">Log In</Link>
+                    <Link to="/login" className={styles.link_style}>Log In</Link>
                 </div>
             </div>
         );
